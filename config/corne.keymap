@@ -35,10 +35,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LS(EQUAL)     &kp LS(NUMBER_1)  &kp EQUAL          &kp LS(MINUS)     &kp RA(GRAVE)           &kp GRAVE      &kp HOME        &kp INSERT      &kp PRINTSCREEN  &kp END    &kp DEL
-&trans  &kp LS(NUMBER_2)  &kp MINUS         &kp RA(BACKSLASH)  &kp LEFT_BRACKET  &kp LS(LEFT_BRACKET)    &kp LS(GRAVE)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &trans
-&trans  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)   &kp RA(Q)         &kp RA(SQT)             &kp RA(MINUS)  &kp LS(N7)      &kp LS(GRAVE)   &kp C_MUTE       &none      &trans
-                                            &trans             &trans            &trans                  &trans         &trans          &trans
+&trans  &kp LS(EQUAL)     &kp LS(NUMBER_1)  &kp EQUAL          &kp LS(MINUS)     &kp RA(GRAVE)           &kp GRAVE              &kp HOME        &kp INSERT      &kp PRINTSCREEN  &kp END    &kp DEL
+&trans  &kp LS(NUMBER_2)  &kp MINUS         &kp RA(BACKSLASH)  &kp LEFT_BRACKET  &kp LS(LEFT_BRACKET)    &kp RA(RIGHT_BRACKET)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &trans
+&trans  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)   &kp RA(Q)         &kp RA(SQT)             &kp RA(MINUS)          &kp LS(N7)      &kp LS(GRAVE)   &kp C_MUTE       &none      &trans
+                                            &trans             &trans            &trans                  &trans                 &trans          &trans
             >;
         };
 
@@ -52,7 +52,7 @@
             bindings = <
 &trans  &bt BT_SEL 3          &bt BT_SEL 2              &bt BT_SEL 1  &bt BT_SEL 0       &bt BT_CLR       &kp RA(SQT)        &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp LS(RIGHT_BRACKET)  &trans
 &trans  &kp SQT               &kp BACKSLASH             &kp LS(N8)    &kp LS(N9)         &kp LS(COMMA)    &kp RIGHT_BRACKET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0                 &trans
-&trans  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp LS(SQT)   &kp LS(BACKSLASH)  &kp LS(SLASH)    &kp LS(N7)         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LS(N7)             &trans
+&trans  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp LS(SQT)   &kp LS(BACKSLASH)  &kp LS(SLASH)    &kp LS(N7)         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH              &trans
                                                         &trans        &trans             &trans           &trans             &trans        &trans
             >;
         };

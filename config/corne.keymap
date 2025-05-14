@@ -23,7 +23,7 @@
 &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I       &kp O    &kp P     &kp BSPC
 &kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K       &kp L    &kp SEMI  &kp LEFT_ALT
 &kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp ESCAPE
+                         &kp LGUI  &mo 2  &kp SPACE    &kp RET  &mo 1  &kp ESCAPE
             >;
         };
 
@@ -35,10 +35,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LS(EQUAL)     &kp LS(NUMBER_1)  &kp EQUAL   &kp LS(MINUS)     &kp RA(GRAVE)           &kp LS(NON_US_BACKSLASH)  &kp HOME        &kp INSERT      &kp PRINTSCREEN  &kp END    &kp DEL
-&trans  &kp LS(SQT)       &kp SQT           &kp GRAVE   &kp LEFT_BRACKET  &kp LS(LEFT_BRACKET)    &kp LS(GRAVE)             &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &trans
-&trans  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N7)  &kp LS(NUMBER_2)  &kp LS(NUMBER_6)        &kp NON_US_BACKSLASH      &kp SLASH       &kp LS(GRAVE)   &kp C_MUTE       &none      &trans
-                                            &trans      &trans            &trans                  &trans                    &trans          &trans
+&trans  &kp LS(EQUAL)     &kp LS(NUMBER_1)  &kp EQUAL          &kp LS(MINUS)     &kp RA(GRAVE)           &kp GRAVE      &kp HOME        &kp INSERT      &kp PRINTSCREEN  &kp END    &kp DEL
+&trans  &kp LS(NUMBER_2)  &kp MINUS         &kp RA(BACKSLASH)  &kp LEFT_BRACKET  &kp LS(LEFT_BRACKET)    &kp LS(GRAVE)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &trans
+&trans  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)   &kp RA(Q)         &kp RA(SQT)             &kp RA(MINUS)  &kp LS(N7)      &kp LS(GRAVE)   &kp C_MUTE       &none      &trans
+                                            &trans             &trans            &trans                  &trans         &trans          &trans
             >;
         };
 
@@ -50,10 +50,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &bt BT_SEL 3          &bt BT_SEL 2              &bt BT_SEL 1  &bt BT_SEL 0              &bt BT_CLR       &kp RA(SQT)        &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp LS(RIGHT_BRACKET)  &trans
-&trans  &kp SQT               &kp NON_US_BACKSLASH      &kp LS(N8)    &kp LS(N9)                &kp LS(COMMA)    &kp RIGHT_BRACKET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0                 &trans
-&trans  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp LS(SQT)   &kp LS(NON_US_BACKSLASH)  &kp LS(SLASH)    &kp LS(N7)         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH              &trans
-                                                        &trans        &trans                    &trans           &trans             &trans        &trans
+&trans  &bt BT_SEL 3          &bt BT_SEL 2              &bt BT_SEL 1  &bt BT_SEL 0       &bt BT_CLR       &kp RA(SQT)        &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp LS(RIGHT_BRACKET)  &trans
+&trans  &kp SQT               &kp BACKSLASH             &kp LS(N8)    &kp LS(N9)         &kp LS(COMMA)    &kp RIGHT_BRACKET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0                 &trans
+&trans  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp LS(SQT)   &kp LS(BACKSLASH)  &kp LS(SLASH)    &kp LS(N7)         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LS(N7)             &trans
+                                                        &trans        &trans             &trans           &trans             &trans        &trans
             >;
         };
     };

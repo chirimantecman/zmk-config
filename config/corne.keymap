@@ -11,6 +11,82 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    behaviors {
+        // Number/Function key mod.
+        n1_f1: n1_or_f1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp F1>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n2_f2: n2_or_f2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp F2>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n3_f3: n3_or_f3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp F3>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n4_f4: n4_or_f4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&kp F4>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n5_f5: n5_or_f5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp F5>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n6_f6: n6_or_f6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp F6>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n7_f7: n7_or_f7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp F7>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n8_f8: n8_or_f8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp F8>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n9_f9: n9_or_f9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp F9>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n0_f10: n0_or_f10 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp F10>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        rb_f11: rb_or_f11 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(RIGHT_BRACKET)>, <&kp F11>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        slash_f12: slash_or_f12 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp F12>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
@@ -52,9 +128,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &bt BT_SEL 3          &bt BT_SEL 2              &bt BT_SEL 1  &bt BT_SEL 0       &bt BT_CLR       &kp RA(SQT)        &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp LS(RIGHT_BRACKET)  &trans
-&trans  &kp SQT               &kp BACKSLASH             &kp LS(N8)    &kp LS(N9)         &kp LS(COMMA)    &kp RIGHT_BRACKET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0                 &trans
-&trans  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp LS(SQT)   &kp LS(BACKSLASH)  &kp LS(SLASH)    &kp LS(N7)         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH              &trans
+&trans  &bt BT_SEL 3          &bt BT_SEL 2              &bt BT_SEL 1  &bt BT_SEL 0       &bt BT_CLR       &kp RA(SQT)        &n7_f7        &n8_f8        &n9_f9        &rb_f11                &trans
+&trans  &kp SQT               &kp BACKSLASH             &kp LS(N8)    &kp LS(N9)         &kp LS(COMMA)    &kp RIGHT_BRACKET  &n4_f4        &n5_f5        &n6_f6        &n0_f10                &trans
+&trans  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp LS(SQT)   &kp LS(BACKSLASH)  &kp LS(SLASH)    &kp LS(N7)         &n1_f1        &n2_f2        &n3_f3        &slash_f12             &trans
                                                         &trans        &trans             &trans           &trans             &trans        &trans
             >;
         };

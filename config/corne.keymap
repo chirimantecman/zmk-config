@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    behaviours {
+    behaviors {
         n1_f1: n1_or_f1 {
             compatible = "zmk,behaviour-mod-morph";
             #binding-cells = <0>;

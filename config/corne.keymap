@@ -10,7 +10,18 @@
 #include <dt-bindings/led/led.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define DEFAULT 0;
+#define LOWER 1;
+#define RAISE 2;
+
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <LOWER RAISE>;
+            then-layer = <DEFAULT>;
+        };
+    };
     behaviors {
         // Number/Function key mod.
         n1_f1: n1_or_f1 {
@@ -91,27 +102,15 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I       &kp O    &kp P     &kp BSPC
 &kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K       &kp L    &kp SEMI  &kp LEFT_ALT
 &kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                         &kp LGUI  &mo 2  &kp SPACE    &kp RET  &mo 1  &kp ESCAPE
+                         &kp LGUI  &mo RAISE  &kp SPACE    &kp RET  &mo LOWER  &kp ESCAPE
             >;
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
 &trans  &kp LS(EQUAL)     &kp LS(NUMBER_1)  &kp EQUAL          &kp LS(MINUS)     &kp RA(GRAVE)           &kp GRAVE              &kp HOME        &kp INSERT      &kp PRINTSCREEN  &kp END    &kp DEL
 &trans  &kp LS(NUMBER_2)  &kp MINUS         &kp RA(BACKSLASH)  &kp LEFT_BRACKET  &kp LS(LEFT_BRACKET)    &kp RA(RIGHT_BRACKET)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &trans
@@ -121,16 +120,18 @@
         };
 
         raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&trans  &bt BT_SEL 3          &bt BT_SEL 2              &bt BT_SEL 1  &bt BT_SEL 0       &bt BT_CLR       &kp RA(SQT)        &n7_f7        &n8_f8        &n9_f9        &rb_f11                &trans
+&trans  &bt BT_SEL 3          &bt BT_SEL 2              &bt BT_SEL 1  &bt BT_SEL 0       &bt BT_CLR       &kp EQUAL          &n7_f7        &n8_f8        &n9_f9        &rb_f11                &trans
 &trans  &kp SQT               &kp BACKSLASH             &kp LS(N8)    &kp LS(N9)         &kp LS(COMMA)    &kp RIGHT_BRACKET  &n4_f4        &n5_f5        &n6_f6        &n0_f10                &trans
-&trans  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp LS(SQT)   &kp LS(BACKSLASH)  &kp LS(SLASH)    &kp LS(N7)         &n1_f1        &n2_f2        &n3_f3        &slash_f12             &trans
+&trans  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp LS(SQT)   &kp LS(BACKSLASH)  &kp RA(SQT)      &kp LS(N7)         &n1_f1        &n2_f2        &n3_f3        &slash_f12             &trans
+                                                        &trans        &trans             &trans           &trans             &trans        &trans
+            >;
+        };
+        tri_layer {
+            bindings = <
+&trans  &trans                &trans                    &trans        &trans             &trans           &trans             &trans        &trans        &trans        &trans                 &trans
+&trans  &trans                &trans                    &trans        &trans             &trans           &trans             &kp A         &kp B         &trans        &trans                 &trans
+&trans  &trans                &trans                    &trans        &trans             &trans           &trans             &trans        &trans        &trans        &trans                 &trans
                                                         &trans        &trans             &trans           &trans             &trans        &trans
             >;
         };

@@ -13,7 +13,7 @@
 / {
     behaviors {
         n1_f1: n1_or_f1 {
-            compatible = "zmk,behaviour-mod-morph";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N1>, <&kp F1>;
             mods = <(MOD_LSFT|MOD_RSFT)>;

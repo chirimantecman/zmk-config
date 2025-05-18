@@ -128,7 +128,7 @@
         tri_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans             &trans      &trans  &trans           &trans           &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &ext_power EP_TOG  &trans      &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &ext_power EP_ON  &trans      &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans             &trans      &trans  &trans           &trans           &trans  &trans  &trans
                         &trans  &trans             &trans      &trans  &trans           &trans
             >;
